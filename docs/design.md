@@ -287,7 +287,7 @@ Old-note pitfalls marked wrong or outdated are dropped from the design.
 
 | Claim | Result | Effect on plan |
 | --- | --- | --- |
-| node-pty compiles from source, needs build tools | **Outdated.** t3 is now one 155 MB native binary; `node-pty` ships `prebuilds/linux-x64/pty.node` | build-essential stays only for cgo, python C extensions and node-gyp in projects. Smoke test checks the prebuilt file exists, nothing compiles |
+| node-pty compiles from source, needs build tools | **Outdated.** t3 is now one 155 MB native binary; `node-pty` ships `prebuilds/linux-x64/pty.node` | build-essential stays only for cgo, python C extensions and node-gyp in projects. Smoke test checks the prebuilt file exists, nothing compiles. Since 0.1.2 the launcher downloads the release into `$T3CODE_HOME/runtime/versions/<ver>/` on first run, so the check looks there |
 | t3 needs node >= 22 | **Partly.** The `t3` npm package is a 4 KB node launcher around the binary. Node is still needed for claude-code's postinstall and both MCP servers (`>=20.19`) | Node tarball in `/usr/local`, pinned and bumped like Go. No node base image |
 | claude-code is a node app | **Outdated.** npm postinstall copies a 231 MB native binary over the stub; no node process at runtime | Must not `--ignore-scripts`. Set `DISABLE_AUTOUPDATER=1` so it never tries to replace itself in `/opt` |
 | `.claude.json` lands outside `~/.claude` | **Confirmed**, but `CLAUDE_CONFIG_DIR` moves it: test showed `.claude.json`, `backups/`, `projects/` all under the dir, nothing in `$HOME` | `CLAUDE_CONFIG_DIR=/config/claude` in image ENV. t3 also honours and forwards it |
