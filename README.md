@@ -11,6 +11,7 @@ What's in the box (pins are `ARG`s in the Dockerfile):
 - Go 1.27.1, Rust 1.98.1 (minimal profile, clippy, rustfmt)
 - Python 3 (Debian) and uv 0.12.21
 - jj 0.45.1, git, git-lfs, gh (GitHub apt repo, at least 2.81.0)
+- flatc 25.12.19 (FlatBuffers compiler, upstream g++-13 build)
 - cloudflared 2026.9.3
 - From Debian: build-essential, clang, lld, cmake, gdb, jq, ripgrep, fd, sqlite3, ffmpeg, imagemagick, psql, redis-cli, qrencode
 

@@ -1,5 +1,5 @@
 # shellcheck shell=bash
-for tool in t3 claude node npm rustc cargo clang cmake python3 uv fnm jj gh \
+for tool in t3 claude node npm rustc cargo clang cmake python3 uv fnm jj flatc gh \
   git git-lfs cloudflared convert psql redis-cli chromium playwright-mcp \
   chrome-devtools-mcp; do
   check "$tool --version" ux "$tool" --version
