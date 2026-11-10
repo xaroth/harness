@@ -12,6 +12,7 @@ ARG GO_VERSION=1.27.3
 ARG RUST_VERSION=1.99.1
 ARG CLOUDFLARED_VERSION=2026.10.7
 ARG JJ_VERSION=0.47.1
+ARG FLATC_VERSION=25.12.19
 ARG FNM_VERSION=1.39.0
 ARG UV_VERSION=0.13.7
 ARG GH_MIN_VERSION=2.81.0
@@ -28,6 +29,7 @@ RUN --mount=type=bind,source=docker/install/go.sh,target=/tmp/i.sh /tmp/i.sh
 RUN --mount=type=bind,source=docker/install/rust.sh,target=/tmp/i.sh /tmp/i.sh
 RUN --mount=type=bind,source=docker/install/uv.sh,target=/tmp/i.sh /tmp/i.sh
 RUN --mount=type=bind,source=docker/install/jj.sh,target=/tmp/i.sh /tmp/i.sh
+RUN --mount=type=bind,source=docker/install/flatc.sh,target=/tmp/i.sh /tmp/i.sh
 RUN --mount=type=bind,source=docker/install/fnm.sh,target=/tmp/i.sh /tmp/i.sh
 RUN --mount=type=bind,source=docker/install/npm-globals.sh,target=/tmp/i.sh /tmp/i.sh
 RUN --mount=type=bind,source=docker/install/user.sh,target=/tmp/i.sh /tmp/i.sh

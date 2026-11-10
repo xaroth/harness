@@ -65,6 +65,7 @@ version python3 python3 --version
 version uv uv --version
 version fnm fnm --version
 version jj jj --version
+version flatc flatc --version
 version gh gh --version
 version git git --version
 version git-lfs git-lfs --version
