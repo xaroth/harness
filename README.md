@@ -5,14 +5,14 @@ A T3 Code server with Claude Code and common toolchains in one Docker image, pub
 What's in the box (pins are `ARG`s in the Dockerfile):
 
 - Debian trixie-slim base
-- t3 0.0.44, Claude Code 2.1.286
-- Node 24.21.0 (corepack enabled), fnm 1.39.0
-- @playwright/mcp 0.0.83, chrome-devtools-mcp 1.10.1, Debian chromium
-- Go 1.27.1, Rust 1.98.1 (minimal profile, clippy, rustfmt)
-- Python 3 (Debian) and uv 0.12.21
-- jj 0.45.1, git, git-lfs, gh (GitHub apt repo, at least 2.81.0)
+- t3 0.1.7, Claude Code 2.1.319
+- Node 24.22.2 (corepack enabled), fnm 1.39.0
+- @playwright/mcp 0.0.84, chrome-devtools-mcp 1.12.0, Debian chromium
+- Go 1.27.3, Rust 1.99.1 (minimal profile, clippy, rustfmt)
+- Python 3 (Debian) and uv 0.13.7
+- jj 0.47.1, git, git-lfs, gh (GitHub apt repo, at least 2.81.0)
 - flatc 25.12.19 (FlatBuffers compiler, upstream g++-13 build)
-- cloudflared 2026.9.3
+- cloudflared 2026.10.7
 - From Debian: build-essential, clang, lld, cmake, gdb, jq, ripgrep, fd, sqlite3, ffmpeg, imagemagick, psql, redis-cli, qrencode
 
 ## Quickstart
